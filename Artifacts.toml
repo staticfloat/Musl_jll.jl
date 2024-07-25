@@ -1,47 +1,153 @@
 [[Musl]]
-arch = "aarch64"
-git-tree-sha1 = "df1776a8c0a9bd32a2013f434731ecf87137effb"
+arch = "x86_64"
+git-tree-sha1 = "3303ab27c550e269c1a597fb7502f0f12519d164"
 libc = "musl"
 os = "linux"
 
     [[Musl.download]]
-    sha256 = "7debd8fce30ddeae06c4e160741001d7fbeb4a7ac5204e0f5bfc2399a0e637e9"
-    url = "https://github.com/JuliaBinaryWrappers/Musl_jll.jl/releases/download/Musl-v1.2.4+0/Musl.v1.2.4.aarch64-linux-musl.tar.gz"
+    sha256 = "f296644ae61762af20dc269d540a45a89daef41786864490099c04a6564bcd34"
+    url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.26-GCC/Musl-v1.1.26-x86_64-linux-musl.tar.gz"
+[[Musl]]
+arch = "i686"
+git-tree-sha1 = "bfd2afe5b7c5ee152909b1efad4ebec48ce7bee4"
+libc = "musl"
+os = "linux"
+
+    [[Musl.download]]
+    sha256 = "4725e3fc149cc8ae1188b75d4ed5dc521831fe02994cc5f35e027230edf15c0e"
+    url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.26-GCC/Musl-v1.1.26-i686-linux-musl.tar.gz"
+[[Musl]]
+arch = "aarch64"
+git-tree-sha1 = "e04ed249a2a90904d24f39ffb28440ac2ae69570"
+libc = "musl"
+os = "linux"
+
+    [[Musl.download]]
+    sha256 = "4db5653905e67dfa3d36052ff4919b2416726586439573e662430673e1aff7b1"
+    url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.26-GCC/Musl-v1.1.26-aarch64-linux-musl.tar.gz"
 [[Musl]]
 arch = "armv6l"
 call_abi = "eabihf"
-git-tree-sha1 = "8c48064e9e99f7f421c34ea36b71010726a7f677"
+git-tree-sha1 = "979b1878fc0aabf9d109cd055fdd980ad74114ad"
 libc = "musl"
 os = "linux"
 
     [[Musl.download]]
-    sha256 = "3f1035af453855c19631eb0f9a523ca619635542f54638a69fc8935db822381d"
-    url = "https://github.com/JuliaBinaryWrappers/Musl_jll.jl/releases/download/Musl-v1.2.4+0/Musl.v1.2.4.armv6l-linux-musleabihf.tar.gz"
+    sha256 = "ec494c094a52ca56df131178ccffdb7f42e91839e7368a3d4d161d8a122a9d82"
+    url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.26-GCC/Musl-v1.1.26-armv6l-linux-musleabihf.tar.gz"
 [[Musl]]
 arch = "armv7l"
 call_abi = "eabihf"
-git-tree-sha1 = "d8a20badae28ab025c7fadab512b5fd77702d739"
+git-tree-sha1 = "548d61d2e052807512de8305479b0d78b465a0a9"
 libc = "musl"
 os = "linux"
 
     [[Musl.download]]
-    sha256 = "9ea9f00139a1e7040c2d60ca0a6c22593c9a8a5bd84a13fe371f2306938fdc95"
-    url = "https://github.com/JuliaBinaryWrappers/Musl_jll.jl/releases/download/Musl-v1.2.4+0/Musl.v1.2.4.armv7l-linux-musleabihf.tar.gz"
-[[Musl]]
-arch = "i686"
-git-tree-sha1 = "d7c08c8abf25b026d52a88fe9b3e0403d2a36bed"
-libc = "musl"
-os = "linux"
+    sha256 = "d0d9fba05b91cf71c2161b091076d420d1a20ec170d6381bb16125b8a20c32c0"
+    url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.26-GCC/Musl-v1.1.26-armv7l-linux-musleabihf.tar.gz"
 
-    [[Musl.download]]
-    sha256 = "3c00522b33fc8875227133b6d7c7ce0228ed38ee65f216afcf5236c30dd7a295"
-    url = "https://github.com/JuliaBinaryWrappers/Musl_jll.jl/releases/download/Musl-v1.2.4+0/Musl.v1.2.4.i686-linux-musl.tar.gz"
-[[Musl]]
+[[Musl-build_log]]
 arch = "x86_64"
-git-tree-sha1 = "52cc1528fc79c7ae1fe1310cf9a28a3b91e26503"
+git-tree-sha1 = "5d40efffe1d84447dff5a8f6562a33267f1e5bf4"
+lazy = true
 libc = "musl"
 os = "linux"
 
-    [[Musl.download]]
-    sha256 = "a043b78fc62a60b643842d48286e433d1830298c100ec68f9c7d57507b2d86a8"
-    url = "https://github.com/JuliaBinaryWrappers/Musl_jll.jl/releases/download/Musl-v1.2.4+0/Musl.v1.2.4.x86_64-linux-musl.tar.gz"
+    [[Musl-build_log.download]]
+    sha256 = "f0bbf3ac0a32319a29ff4fd34575207ef4292edb8147efc98b43dcbbd76fa00e"
+    url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.26-GCC/Musl-build_log-v1.1.26-x86_64-linux-musl.tar.gz"
+[[Musl-build_log]]
+arch = "i686"
+git-tree-sha1 = "3fd5233fd5eed18f11c01ca3e427bcc5ceaed98b"
+lazy = true
+libc = "musl"
+os = "linux"
+
+    [[Musl-build_log.download]]
+    sha256 = "2431c501c8c8110cd72794d4614415ed31aed4d8c43c91455adaf03e0fe78d8f"
+    url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.26-GCC/Musl-build_log-v1.1.26-i686-linux-musl.tar.gz"
+[[Musl-build_log]]
+arch = "aarch64"
+git-tree-sha1 = "0b876d5afb277a76c412441ce15002d29cbde467"
+lazy = true
+libc = "musl"
+os = "linux"
+
+    [[Musl-build_log.download]]
+    sha256 = "f4d4e4fa0c5aaf99a892080e79631cf497df60a585ce9f64eee45edbef3857fb"
+    url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.26-GCC/Musl-build_log-v1.1.26-aarch64-linux-musl.tar.gz"
+[[Musl-build_log]]
+arch = "armv6l"
+call_abi = "eabihf"
+git-tree-sha1 = "baadbeecdbaf7237d9a7826d0aa6cb7830003ced"
+lazy = true
+libc = "musl"
+os = "linux"
+
+    [[Musl-build_log.download]]
+    sha256 = "709aaf015af8ea7752b21070e2a9ccd25d3b33939216e3a7286b0ddf33bdceb8"
+    url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.26-GCC/Musl-build_log-v1.1.26-armv6l-linux-musleabihf.tar.gz"
+[[Musl-build_log]]
+arch = "armv7l"
+call_abi = "eabihf"
+git-tree-sha1 = "86f519d92dfb63e3c89b7e790c299ff350459b35"
+lazy = true
+libc = "musl"
+os = "linux"
+
+    [[Musl-build_log.download]]
+    sha256 = "c1d1f8386ef633d5429fba2a602c93823033ad818bf9383fae333e143f4f28b2"
+    url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.26-GCC/Musl-build_log-v1.1.26-armv7l-linux-musleabihf.tar.gz"
+
+[[Musl-extract_log]]
+arch = "x86_64"
+git-tree-sha1 = "c52452fb541505e17114a2110a33eff35b891600"
+lazy = true
+libc = "musl"
+os = "linux"
+
+    [[Musl-extract_log.download]]
+    sha256 = "99394a59985691b4c60ff94bd0b7f60467f222179f328b611251b1bac422a87a"
+    url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.26-GCC/Musl-extract_log-v1.1.26-x86_64-linux-musl.tar.gz"
+[[Musl-extract_log]]
+arch = "i686"
+git-tree-sha1 = "a377ecffe829b5c9e2b92e1218dca12f93f47e9a"
+lazy = true
+libc = "musl"
+os = "linux"
+
+    [[Musl-extract_log.download]]
+    sha256 = "41db2b612c0174392fc35b2d4dba39f8d115369fc7b957ca80aa775803b260ea"
+    url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.26-GCC/Musl-extract_log-v1.1.26-i686-linux-musl.tar.gz"
+[[Musl-extract_log]]
+arch = "aarch64"
+git-tree-sha1 = "3e23b96e117ca40a636ed6846e6820f663f1f3f1"
+lazy = true
+libc = "musl"
+os = "linux"
+
+    [[Musl-extract_log.download]]
+    sha256 = "4d557133a527ca1cb659b1f7e1b5d97656725a02690bbe3fffb12069c9ab59e3"
+    url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.26-GCC/Musl-extract_log-v1.1.26-aarch64-linux-musl.tar.gz"
+[[Musl-extract_log]]
+arch = "armv6l"
+call_abi = "eabihf"
+git-tree-sha1 = "bcc60f09bdee127aa57378810f9196cf14577881"
+lazy = true
+libc = "musl"
+os = "linux"
+
+    [[Musl-extract_log.download]]
+    sha256 = "485932ad477bd2ce4966ac6f41bac9aa96050f9beea59b4f5d2da7692dbee58e"
+    url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.26-GCC/Musl-extract_log-v1.1.26-armv6l-linux-musleabihf.tar.gz"
+[[Musl-extract_log]]
+arch = "armv7l"
+call_abi = "eabihf"
+git-tree-sha1 = "a549f005ae555fd44cac17177194471e6d21e0bd"
+lazy = true
+libc = "musl"
+os = "linux"
+
+    [[Musl-extract_log.download]]
+    sha256 = "e11236d77dfca506cd87aa13c2dffa08cf0d2f8270554d273ae4f0e6f6ffa6aa"
+    url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.26-GCC/Musl-extract_log-v1.1.26-armv7l-linux-musleabihf.tar.gz"
