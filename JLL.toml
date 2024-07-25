@@ -1,5 +1,5 @@
 name = "Musl"
-version = "1.1.28"
+version = "1.2.8"
 julia_compat = "1.6"
 platform_augmentation_code = ""
 
@@ -7,24 +7,24 @@ platform_augmentation_code = ""
 deps = []
 name = "Musl"
 lazy = "false"
-src_version = "1.1.24"
+src_version = "1.2.5"
 platform = "x86_64-linux-musl"
 
     [builds.callback_defs]
 
     [builds.auxilliary_artifacts.build_log]
-    treehash = "sha1:8de0bd41646da8c1af0132d4667920fa09141fe6"
+    treehash = "sha1:0e56102b30b7730706f31ec8ea55c35b1695df04"
 
         [[builds.auxilliary_artifacts.build_log.download_sources]]
-        tarball_hash = "sha256:ca045673956e3c328bf76e924130943d33d70fa909954bdff4e8ba67224be4b2"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.28-GCC/Musl-build_log-v1.1.28-x86_64-linux-musl.tar.gz"
+        tarball_hash = "sha256:be2141cf51a84afb149a3dc1349ddc0859d5ba86e80caed1305dc00c022876bc"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.8-GCC/Musl-build_log-v1.2.8-x86_64-linux-musl.tar.gz"
 
     [builds.auxilliary_artifacts.extract_log]
-    treehash = "sha1:053dff8469f01d499780bb4625660a96b7f71acf"
+    treehash = "sha1:c6233925da65596406ec1654cee8fefae0dd7a18"
 
         [[builds.auxilliary_artifacts.extract_log.download_sources]]
-        tarball_hash = "sha256:b4e809b4c83fdf0ce32cd6c2c2da95dafc230443c509efba15d1008f9a09001c"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.28-GCC/Musl-extract_log-v1.1.28-x86_64-linux-musl.tar.gz"
+        tarball_hash = "sha256:43123c4adc8f42c6e6689f5673a51010be9cdaf4e8935a99156755d196089406"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.8-GCC/Musl-extract_log-v1.2.8-x86_64-linux-musl.tar.gz"
 
     [[builds.products]]
     deps = []
@@ -35,37 +35,37 @@ platform = "x86_64-linux-musl"
     path = "lib/libc.so"
 
     [[builds.sources]]
-    treehash = "sha1:0d04173adea3b201b8ec3b955894c487de4c5853"
-    url = "https://musl.libc.org/releases/musl-1.1.24.tar.gz"
+    treehash = "sha1:772272a3f819d22b9eac7888c8d5134af5449977"
+    url = "https://musl.libc.org/releases/musl-1.2.5.tar.gz"
 
     [builds.artifact]
-    treehash = "sha1:3303ab27c550e269c1a597fb7502f0f12519d164"
+    treehash = "sha1:136a6d4970af4575c7430ea37cfc62da514a6a7d"
 
         [[builds.artifact.download_sources]]
-        tarball_hash = "sha256:b0a1970614af6d893ab401d0585da0dbc686324052d99960a19f5d15b81e7522"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.28-GCC/Musl-v1.1.28-x86_64-linux-musl.tar.gz"
+        tarball_hash = "sha256:48cbd98664ee5e864b84e296372a1021f0ebeee9a093df585ceb4be651b9ddbf"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.8-GCC/Musl-v1.2.8-x86_64-linux-musl.tar.gz"
 [[builds]]
 deps = []
 name = "Musl"
 lazy = "false"
-src_version = "1.1.24"
+src_version = "1.2.5"
 platform = "i686-linux-musl"
 
     [builds.callback_defs]
 
     [builds.auxilliary_artifacts.build_log]
-    treehash = "sha1:49f49d10a32b0cdd08113d2f3ffb4e4a424d3bc9"
+    treehash = "sha1:4aae9dd628f84db5ba020fcc5e4332dccf8708ef"
 
         [[builds.auxilliary_artifacts.build_log.download_sources]]
-        tarball_hash = "sha256:6036cb62caf24c7c56244dd00d0fc22ee87375591925944c898ad4182b20bce8"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.28-GCC/Musl-build_log-v1.1.28-i686-linux-musl.tar.gz"
+        tarball_hash = "sha256:5a7c3e61e3dcc070eb08030abf2fd285604d87fa7508f17b8662171c6ea99aac"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.8-GCC/Musl-build_log-v1.2.8-i686-linux-musl.tar.gz"
 
     [builds.auxilliary_artifacts.extract_log]
-    treehash = "sha1:93850cb2050dff76f27f7d19da11836e8d0fe510"
+    treehash = "sha1:21a53ad119488ad2c0dffd983d760eaf07c439a5"
 
         [[builds.auxilliary_artifacts.extract_log.download_sources]]
-        tarball_hash = "sha256:843648f7caf5d1d3e1ce2e79b8780f9d7e59dba8154a36da0887d6afefd32fe5"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.28-GCC/Musl-extract_log-v1.1.28-i686-linux-musl.tar.gz"
+        tarball_hash = "sha256:e07b5e31121d788fffdd78c67d832171ab1e91adac94a4c17988386667c87891"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.8-GCC/Musl-extract_log-v1.2.8-i686-linux-musl.tar.gz"
 
     [[builds.products]]
     deps = []
@@ -76,37 +76,37 @@ platform = "i686-linux-musl"
     path = "lib/libc.so"
 
     [[builds.sources]]
-    treehash = "sha1:0d04173adea3b201b8ec3b955894c487de4c5853"
-    url = "https://musl.libc.org/releases/musl-1.1.24.tar.gz"
+    treehash = "sha1:772272a3f819d22b9eac7888c8d5134af5449977"
+    url = "https://musl.libc.org/releases/musl-1.2.5.tar.gz"
 
     [builds.artifact]
-    treehash = "sha1:bfd2afe5b7c5ee152909b1efad4ebec48ce7bee4"
+    treehash = "sha1:a83df83c1889bb951189165a1e8849efb59a7d62"
 
         [[builds.artifact.download_sources]]
-        tarball_hash = "sha256:c05df4ddbf62c2784cf359c8ce5720a5b4c39c4cbe78e538943c1ac10e9ec31b"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.28-GCC/Musl-v1.1.28-i686-linux-musl.tar.gz"
+        tarball_hash = "sha256:61ec4925c6ec50815c13d09bb9a6399a0b0db9c7375e01a33154a6bdc926a5fe"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.8-GCC/Musl-v1.2.8-i686-linux-musl.tar.gz"
 [[builds]]
 deps = []
 name = "Musl"
 lazy = "false"
-src_version = "1.1.24"
+src_version = "1.2.5"
 platform = "aarch64-linux-musl"
 
     [builds.callback_defs]
 
     [builds.auxilliary_artifacts.build_log]
-    treehash = "sha1:9592113e67ecb93a34066d068086dacda1469560"
+    treehash = "sha1:571368caca15107137af736bd05e596aad713d63"
 
         [[builds.auxilliary_artifacts.build_log.download_sources]]
-        tarball_hash = "sha256:ef37d6c53e47550004293058a74be625d8fec8a143c69ae1a7e28c84c5b2ea56"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.28-GCC/Musl-build_log-v1.1.28-aarch64-linux-musl.tar.gz"
+        tarball_hash = "sha256:9af876e259f375513baf246c25c38fc8e0bc3cffb24b93ce25e1f8bf2c43cea6"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.8-GCC/Musl-build_log-v1.2.8-aarch64-linux-musl.tar.gz"
 
     [builds.auxilliary_artifacts.extract_log]
-    treehash = "sha1:965fa95675a35fdde06b6063fc8b01a360cd3055"
+    treehash = "sha1:63b95e9aaea313bf54b94e575730c49a37760d4b"
 
         [[builds.auxilliary_artifacts.extract_log.download_sources]]
-        tarball_hash = "sha256:8e1f01a492a33879e316adcdef19905e3368ea4214197fad505e7ab31717c46d"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.28-GCC/Musl-extract_log-v1.1.28-aarch64-linux-musl.tar.gz"
+        tarball_hash = "sha256:7908753e7183f56b3414bd75a27ca2e230bfa2c8482f52e30f6df77553a0dc44"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.8-GCC/Musl-extract_log-v1.2.8-aarch64-linux-musl.tar.gz"
 
     [[builds.products]]
     deps = []
@@ -117,37 +117,37 @@ platform = "aarch64-linux-musl"
     path = "lib/libc.so"
 
     [[builds.sources]]
-    treehash = "sha1:0d04173adea3b201b8ec3b955894c487de4c5853"
-    url = "https://musl.libc.org/releases/musl-1.1.24.tar.gz"
+    treehash = "sha1:772272a3f819d22b9eac7888c8d5134af5449977"
+    url = "https://musl.libc.org/releases/musl-1.2.5.tar.gz"
 
     [builds.artifact]
-    treehash = "sha1:e04ed249a2a90904d24f39ffb28440ac2ae69570"
+    treehash = "sha1:b780f2bb9205988fa2090ef9567eef77a321fe2c"
 
         [[builds.artifact.download_sources]]
-        tarball_hash = "sha256:2b8ce61e98107f601eca46103be94853b76da4f5903969a6b39ab61f54cab833"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.28-GCC/Musl-v1.1.28-aarch64-linux-musl.tar.gz"
+        tarball_hash = "sha256:eedcb0ae284b033c0ed1b14a187f23a4580abf3325f819e99fc190a3dfa96d0b"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.8-GCC/Musl-v1.2.8-aarch64-linux-musl.tar.gz"
 [[builds]]
 deps = []
 name = "Musl"
 lazy = "false"
-src_version = "1.1.24"
+src_version = "1.2.5"
 platform = "armv6l-linux-musleabihf"
 
     [builds.callback_defs]
 
     [builds.auxilliary_artifacts.build_log]
-    treehash = "sha1:f0eb3da6775e6aedd758da6cdf92c7a4a2fcf51b"
+    treehash = "sha1:84a66537af80fd5ab77756aefc5107273e7cad2d"
 
         [[builds.auxilliary_artifacts.build_log.download_sources]]
-        tarball_hash = "sha256:6f14520f53b8c31a259a9193a5298072d27d40b325682340bb5c24d74e7721dd"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.28-GCC/Musl-build_log-v1.1.28-armv6l-linux-musleabihf.tar.gz"
+        tarball_hash = "sha256:48d279eaee6a4c457092bf7235de6e2b08eb3c4ed89936a4ced230ec3d402d01"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.8-GCC/Musl-build_log-v1.2.8-armv6l-linux-musleabihf.tar.gz"
 
     [builds.auxilliary_artifacts.extract_log]
-    treehash = "sha1:89c7436c975841ecfc785106659c88c88da2c1bc"
+    treehash = "sha1:d7fdacd3deacee54b478ee645dab0a2376684160"
 
         [[builds.auxilliary_artifacts.extract_log.download_sources]]
-        tarball_hash = "sha256:3a560df26e7686115bf87fb9c8a06c5174062f7f4ec202de1a3ab0a0b2ab2db8"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.28-GCC/Musl-extract_log-v1.1.28-armv6l-linux-musleabihf.tar.gz"
+        tarball_hash = "sha256:d3671d4d10bead8668c23e1cc63efc342fc7298ffc44671b05e49cd5e635fc22"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.8-GCC/Musl-extract_log-v1.2.8-armv6l-linux-musleabihf.tar.gz"
 
     [[builds.products]]
     deps = []
@@ -158,37 +158,37 @@ platform = "armv6l-linux-musleabihf"
     path = "lib/libc.so"
 
     [[builds.sources]]
-    treehash = "sha1:0d04173adea3b201b8ec3b955894c487de4c5853"
-    url = "https://musl.libc.org/releases/musl-1.1.24.tar.gz"
+    treehash = "sha1:772272a3f819d22b9eac7888c8d5134af5449977"
+    url = "https://musl.libc.org/releases/musl-1.2.5.tar.gz"
 
     [builds.artifact]
-    treehash = "sha1:979b1878fc0aabf9d109cd055fdd980ad74114ad"
+    treehash = "sha1:142e6d933077cd4b090d26c8ccb33cab26cc46ae"
 
         [[builds.artifact.download_sources]]
-        tarball_hash = "sha256:3b0ee8e60d8b19b163b7c40a089bf18712588428d069079d4efad0d12c23bbc7"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.28-GCC/Musl-v1.1.28-armv6l-linux-musleabihf.tar.gz"
+        tarball_hash = "sha256:0daab7aae33eb5c03c814ec4180c11fb0af5de1c7159e0b2e7f1e63ab557683e"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.8-GCC/Musl-v1.2.8-armv6l-linux-musleabihf.tar.gz"
 [[builds]]
 deps = []
 name = "Musl"
 lazy = "false"
-src_version = "1.1.24"
+src_version = "1.2.5"
 platform = "armv7l-linux-musleabihf"
 
     [builds.callback_defs]
 
     [builds.auxilliary_artifacts.build_log]
-    treehash = "sha1:8bfc1778a7089d5149a6202f885780fa79b5f7f8"
+    treehash = "sha1:815c0a383d2953076d91242b36119a8967e67e03"
 
         [[builds.auxilliary_artifacts.build_log.download_sources]]
-        tarball_hash = "sha256:42b16d4979a80ac7612c0ab86f08d32965f4b3b701f0aea8a4d185f9331abf14"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.28-GCC/Musl-build_log-v1.1.28-armv7l-linux-musleabihf.tar.gz"
+        tarball_hash = "sha256:d9b526cb7550370a512f1b24d7064dcab7e5825907267d90b661843f87ddd1ff"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.8-GCC/Musl-build_log-v1.2.8-armv7l-linux-musleabihf.tar.gz"
 
     [builds.auxilliary_artifacts.extract_log]
-    treehash = "sha1:e6f830346b2b0fecb34beb4d5888130b0e69f038"
+    treehash = "sha1:b36b11923b89fc0701e8c84de53fe73820a30121"
 
         [[builds.auxilliary_artifacts.extract_log.download_sources]]
-        tarball_hash = "sha256:f859c25609c33cf0ee4a7be9ca8af2e8fe9d1a146eb35cb54352f8fa02c795d7"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.28-GCC/Musl-extract_log-v1.1.28-armv7l-linux-musleabihf.tar.gz"
+        tarball_hash = "sha256:b8c517864a1dd1c7db98a56f6adcdfa3a11340593e9c2e4575e216fa7356ca31"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.8-GCC/Musl-extract_log-v1.2.8-armv7l-linux-musleabihf.tar.gz"
 
     [[builds.products]]
     deps = []
@@ -199,12 +199,12 @@ platform = "armv7l-linux-musleabihf"
     path = "lib/libc.so"
 
     [[builds.sources]]
-    treehash = "sha1:0d04173adea3b201b8ec3b955894c487de4c5853"
-    url = "https://musl.libc.org/releases/musl-1.1.24.tar.gz"
+    treehash = "sha1:772272a3f819d22b9eac7888c8d5134af5449977"
+    url = "https://musl.libc.org/releases/musl-1.2.5.tar.gz"
 
     [builds.artifact]
-    treehash = "sha1:548d61d2e052807512de8305479b0d78b465a0a9"
+    treehash = "sha1:64af699906228982a0ae3dcbf149af76e4af6424"
 
         [[builds.artifact.download_sources]]
-        tarball_hash = "sha256:04dbfa151ed1626b4c6b486dfde117f3c493ae7ecc7b20fd3ed98cae47f175a6"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.28-GCC/Musl-v1.1.28-armv7l-linux-musleabihf.tar.gz"
+        tarball_hash = "sha256:054e85866a0503b3a6f07a61cb435159228639c896990ffeabaad0a18b249877"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.8-GCC/Musl-v1.2.8-armv7l-linux-musleabihf.tar.gz"
