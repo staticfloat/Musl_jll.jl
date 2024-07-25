@@ -1,6 +1,6 @@
 name = "Musl_jll"
 uuid = "3490aa6f-05e0-5d3a-9648-5b0c647c155f"
-version = "1.1.29"
+version = "1.2.9"
 
 [deps]
 Libdl = "8f399da3-3557-5675-b5ff-fb832c97cbdb"
