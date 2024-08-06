@@ -1,30 +1,35 @@
 name = "Musl"
-version = "1.2.11"
+version = "1.1.25"
 julia_compat = "1.6"
 platform_augmentation_code = ""
 
 [[builds]]
-deps = []
 name = "Musl"
-lazy = "false"
-src_version = "1.2.5"
 platform = "x86_64-linux-musl"
+deps = []
+lazy = "false"
+src_version = "1.1.24"
+
+    [[builds.licenses]]
+    license_text = "musl as a whole is licensed under the following standard MIT license:\n\n----------------------------------------------------------------------\nCopyright © 2005-2019 Rich Felker, et al.\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n----------------------------------------------------------------------\n\nAuthors/contributors include:\n\nA. Wilcox\nAlex Dowad\nAlex Suykov\nAlexander Monakov\nAndre McCurdy\nAndrew Kelley\nAnthony G. Basile\nAric Belsito\nArvid Picciani\nBartosz Brachaczek\nBenjamin Peterson\nBobby Bingham\nBoris Brezillon\nBrent Cook\nChris Spiegel\nClément Vasseur\nDaniel Micay\nDaniel Sabogal\nDaurnimator\nDavid Carlier\nDavid Edelsohn\nDenys Vlasenko\nDmitry Ivanov\nDmitry V. Levin\nDrew DeVault\nEmil Renner Berthing\nFangrui Song\nFelix Fietkau\nFelix Janda\nGianluca Anzolin\nHauke Mehrtens\nHe X\nHiltjo Posthuma\nIsaac Dunham\nJaydeep Patil\nJens Gustedt\nJeremy Huntwork\nJo-Philipp Wich\nJoakim Sindholt\nJohn Spencer\nJosiah Worcester\nJulien Ramseier\nJustin Cormack\nKaarle Ritvanen\nKhem Raj\nKylie McClain\nLeah Neukirchen\nLuca Barbato\nLuka Perkov\nM Farkas-Dyck (Strake)\nMahesh Bodapati\nMarkus Wichmann\nMasanori Ogino\nMichael Clark\nMichael Forney\nMikhail Kremnyov\nNatanael Copa\nNicholas J. Kain\norc\nPascal Cuoq\nPatrick Oppenlander\nPetr Hosek\nPetr Skocik\nPierre Carrier\nReini Urban\nRich Felker\nRichard Pennington\nRyan Fairfax\nSamuel Holland\nSegev Finer\nShiz\nsin\nSolar Designer\nStefan Kristiansson\nStefan O'Rear\nSzabolcs Nagy\nTimo Teräs\nTrutz Behn\nValentin Ochs\nWill Dietz\nWilliam Haddon\nWilliam Pitcock\n\nPortions of this software are derived from third-party works licensed\nunder terms compatible with the above MIT license:\n\nThe TRE regular expression implementation (src/regex/reg* and\nsrc/regex/tre*) is Copyright © 2001-2008 Ville Laurikari and licensed\nunder a 2-clause BSD license (license text in the source files). The\nincluded version has been heavily modified by Rich Felker in 2012, in\nthe interests of size, simplicity, and namespace cleanliness.\n\nMuch of the math library code (src/math/* and src/complex/*) is\nCopyright © 1993,2004 Sun Microsystems or\nCopyright © 2003-2011 David Schultz or\nCopyright © 2003-2009 Steven G. Kargl or\nCopyright © 2003-2009 Bruce D. Evans or\nCopyright © 2008 Stephen L. Moshier or\nCopyright © 2017-2018 Arm Limited\nand labelled as such in comments in the individual source files. All\nhave been licensed under extremely permissive terms.\n\nThe ARM memcpy code (src/string/arm/memcpy_el.S) is Copyright © 2008\nThe Android Open Source Project and is licensed under a two-clause BSD\nlicense. It was taken from Bionic libc, used on Android.\n\nThe implementation of DES for crypt (src/crypt/crypt_des.c) is\nCopyright © 1994 David Burren. It is licensed under a BSD license.\n\nThe implementation of blowfish crypt (src/crypt/crypt_blowfish.c) was\noriginally written by Solar Designer and placed into the public\ndomain. The code also comes with a fallback permissive license for use\nin jurisdictions that may not recognize the public domain.\n\nThe smoothsort implementation (src/stdlib/qsort.c) is Copyright © 2011\nValentin Ochs and is licensed under an MIT-style license.\n\nThe x86_64 port was written by Nicholas J. Kain and is licensed under\nthe standard MIT terms.\n\nThe mips and microblaze ports were originally written by Richard\nPennington for use in the ellcc project. The original code was adapted\nby Rich Felker for build system and code conventions during upstream\nintegration. It is licensed under the standard MIT terms.\n\nThe mips64 port was contributed by Imagination Technologies and is\nlicensed under the standard MIT terms.\n\nThe powerpc port was also originally written by Richard Pennington,\nand later supplemented and integrated by John Spencer. It is licensed\nunder the standard MIT terms.\n\nAll other files which have no copyright comments are original works\nproduced specifically for use as part of this library, written either\nby Rich Felker, the main author of the library, or by one or more\ncontibutors listed above. Details on authorship of individual files\ncan be found in the git version control history of the project. The\nomission of copyright and license comments in each file is in the\ninterest of source tree size.\n\nIn addition, permission is hereby granted for all public header files\n(include/* and arch/*/bits/*) and crt files intended to be linked into\napplications (crt/*, ldso/dlstart.c, and arch/*/crt_arch.h) to omit\nthe copyright notice and permission notice otherwise required by the\nlicense, and to use these files without any requirement of\nattribution. These files include substantial contributions from:\n\nBobby Bingham\nJohn Spencer\nNicholas J. Kain\nRich Felker\nRichard Pennington\nStefan Kristiansson\nSzabolcs Nagy\n\nall of whom have explicitly granted such permission.\n\nThis file previously contained text expressing a belief that most of\nthe files covered by the above exception were sufficiently trivial not\nto be subject to copyright, resulting in confusion over whether it\nnegated the permissions granted in the license. In the spirit of\npermissive licensing, and of not having licensing issues being an\nobstacle to adoption, that text has been removed.\n"
+    filename = "COPYRIGHT"
+    license_type = "MIT"
 
     [builds.callback_defs]
 
     [builds.auxilliary_artifacts.build_log]
-    treehash = "sha1:d1c75ffc7e7fa6d1553f327a8add632b0b2b8e84"
+    treehash = "sha1:b07555e38b3c4a872d2ae123b2a0d5f9afa68f72"
 
         [[builds.auxilliary_artifacts.build_log.download_sources]]
-        tarball_hash = "sha256:bf27e06d9e9ad6331510f3161be2e449e79b9ed994a8c7dcf95cc80d2edd4e38"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.11-GCC/Musl-build_log-v1.2.11-x86_64-linux-musl.tar.gz"
+        tarball_hash = "sha256:b6c7440c0a8b31241fc29974634468994e8a9a3e8932e6ba82f06dabc5e3a570"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.25-GCC/Musl-build_log-v1.1.25-x86_64-linux-musl.tar.gz"
 
     [builds.auxilliary_artifacts.extract_log]
-    treehash = "sha1:153d5ca7691ef5dbe59a464e707e5cb93180284d"
+    treehash = "sha1:3421ca86726ab8d7aa2be7aa5828c7152f8134c5"
 
         [[builds.auxilliary_artifacts.extract_log.download_sources]]
-        tarball_hash = "sha256:d7e42b7d090edf44e8231540a505996f6ddb4e2c4db09a1c0584cc4827fd0c40"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.11-GCC/Musl-extract_log-v1.2.11-x86_64-linux-musl.tar.gz"
+        tarball_hash = "sha256:d9e2715ca4f0b34b8c3d0db2bdebed1a1640f571a24ade2b6ca8e95da20cb3e8"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.25-GCC/Musl-extract_log-v1.1.25-x86_64-linux-musl.tar.gz"
 
     [[builds.products]]
     deps = []
@@ -35,37 +40,42 @@ platform = "x86_64-linux-musl"
     path = "usr/lib/libc.so"
 
     [[builds.sources]]
-    treehash = "sha1:772272a3f819d22b9eac7888c8d5134af5449977"
-    url = "https://musl.libc.org/releases/musl-1.2.5.tar.gz"
+    treehash = "sha1:0d04173adea3b201b8ec3b955894c487de4c5853"
+    url = "https://musl.libc.org/releases/musl-1.1.24.tar.gz"
 
     [builds.artifact]
-    treehash = "sha1:e66a4083e3387c5655bf354429ca0ca77bbc4904"
+    treehash = "sha1:1c4d75e7512e272f3dd906e817acb58cb74867e8"
 
         [[builds.artifact.download_sources]]
-        tarball_hash = "sha256:37a7a69bcd639321a4a0e9b0a25d8d4191347101a8b9313d56e767e8d2782cd3"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.11-GCC/Musl-v1.2.11-x86_64-linux-musl.tar.gz"
+        tarball_hash = "sha256:af069c12d403b3e0b64c59ec66dc2d06c5c885dc6452f9a6dc26ae62c38b7d90"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.25-GCC/Musl-v1.1.25-x86_64-linux-musl.tar.gz"
 [[builds]]
-deps = []
 name = "Musl"
-lazy = "false"
-src_version = "1.2.5"
 platform = "i686-linux-musl"
+deps = []
+lazy = "false"
+src_version = "1.1.24"
+
+    [[builds.licenses]]
+    license_text = "musl as a whole is licensed under the following standard MIT license:\n\n----------------------------------------------------------------------\nCopyright © 2005-2019 Rich Felker, et al.\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n----------------------------------------------------------------------\n\nAuthors/contributors include:\n\nA. Wilcox\nAlex Dowad\nAlex Suykov\nAlexander Monakov\nAndre McCurdy\nAndrew Kelley\nAnthony G. Basile\nAric Belsito\nArvid Picciani\nBartosz Brachaczek\nBenjamin Peterson\nBobby Bingham\nBoris Brezillon\nBrent Cook\nChris Spiegel\nClément Vasseur\nDaniel Micay\nDaniel Sabogal\nDaurnimator\nDavid Carlier\nDavid Edelsohn\nDenys Vlasenko\nDmitry Ivanov\nDmitry V. Levin\nDrew DeVault\nEmil Renner Berthing\nFangrui Song\nFelix Fietkau\nFelix Janda\nGianluca Anzolin\nHauke Mehrtens\nHe X\nHiltjo Posthuma\nIsaac Dunham\nJaydeep Patil\nJens Gustedt\nJeremy Huntwork\nJo-Philipp Wich\nJoakim Sindholt\nJohn Spencer\nJosiah Worcester\nJulien Ramseier\nJustin Cormack\nKaarle Ritvanen\nKhem Raj\nKylie McClain\nLeah Neukirchen\nLuca Barbato\nLuka Perkov\nM Farkas-Dyck (Strake)\nMahesh Bodapati\nMarkus Wichmann\nMasanori Ogino\nMichael Clark\nMichael Forney\nMikhail Kremnyov\nNatanael Copa\nNicholas J. Kain\norc\nPascal Cuoq\nPatrick Oppenlander\nPetr Hosek\nPetr Skocik\nPierre Carrier\nReini Urban\nRich Felker\nRichard Pennington\nRyan Fairfax\nSamuel Holland\nSegev Finer\nShiz\nsin\nSolar Designer\nStefan Kristiansson\nStefan O'Rear\nSzabolcs Nagy\nTimo Teräs\nTrutz Behn\nValentin Ochs\nWill Dietz\nWilliam Haddon\nWilliam Pitcock\n\nPortions of this software are derived from third-party works licensed\nunder terms compatible with the above MIT license:\n\nThe TRE regular expression implementation (src/regex/reg* and\nsrc/regex/tre*) is Copyright © 2001-2008 Ville Laurikari and licensed\nunder a 2-clause BSD license (license text in the source files). The\nincluded version has been heavily modified by Rich Felker in 2012, in\nthe interests of size, simplicity, and namespace cleanliness.\n\nMuch of the math library code (src/math/* and src/complex/*) is\nCopyright © 1993,2004 Sun Microsystems or\nCopyright © 2003-2011 David Schultz or\nCopyright © 2003-2009 Steven G. Kargl or\nCopyright © 2003-2009 Bruce D. Evans or\nCopyright © 2008 Stephen L. Moshier or\nCopyright © 2017-2018 Arm Limited\nand labelled as such in comments in the individual source files. All\nhave been licensed under extremely permissive terms.\n\nThe ARM memcpy code (src/string/arm/memcpy_el.S) is Copyright © 2008\nThe Android Open Source Project and is licensed under a two-clause BSD\nlicense. It was taken from Bionic libc, used on Android.\n\nThe implementation of DES for crypt (src/crypt/crypt_des.c) is\nCopyright © 1994 David Burren. It is licensed under a BSD license.\n\nThe implementation of blowfish crypt (src/crypt/crypt_blowfish.c) was\noriginally written by Solar Designer and placed into the public\ndomain. The code also comes with a fallback permissive license for use\nin jurisdictions that may not recognize the public domain.\n\nThe smoothsort implementation (src/stdlib/qsort.c) is Copyright © 2011\nValentin Ochs and is licensed under an MIT-style license.\n\nThe x86_64 port was written by Nicholas J. Kain and is licensed under\nthe standard MIT terms.\n\nThe mips and microblaze ports were originally written by Richard\nPennington for use in the ellcc project. The original code was adapted\nby Rich Felker for build system and code conventions during upstream\nintegration. It is licensed under the standard MIT terms.\n\nThe mips64 port was contributed by Imagination Technologies and is\nlicensed under the standard MIT terms.\n\nThe powerpc port was also originally written by Richard Pennington,\nand later supplemented and integrated by John Spencer. It is licensed\nunder the standard MIT terms.\n\nAll other files which have no copyright comments are original works\nproduced specifically for use as part of this library, written either\nby Rich Felker, the main author of the library, or by one or more\ncontibutors listed above. Details on authorship of individual files\ncan be found in the git version control history of the project. The\nomission of copyright and license comments in each file is in the\ninterest of source tree size.\n\nIn addition, permission is hereby granted for all public header files\n(include/* and arch/*/bits/*) and crt files intended to be linked into\napplications (crt/*, ldso/dlstart.c, and arch/*/crt_arch.h) to omit\nthe copyright notice and permission notice otherwise required by the\nlicense, and to use these files without any requirement of\nattribution. These files include substantial contributions from:\n\nBobby Bingham\nJohn Spencer\nNicholas J. Kain\nRich Felker\nRichard Pennington\nStefan Kristiansson\nSzabolcs Nagy\n\nall of whom have explicitly granted such permission.\n\nThis file previously contained text expressing a belief that most of\nthe files covered by the above exception were sufficiently trivial not\nto be subject to copyright, resulting in confusion over whether it\nnegated the permissions granted in the license. In the spirit of\npermissive licensing, and of not having licensing issues being an\nobstacle to adoption, that text has been removed.\n"
+    filename = "COPYRIGHT"
+    license_type = "MIT"
 
     [builds.callback_defs]
 
     [builds.auxilliary_artifacts.build_log]
-    treehash = "sha1:f9f9939ad358aea008e5e2d355bf912193b2acb4"
+    treehash = "sha1:66a0e14390df22b658b0746a2eebf3ba38a8dba9"
 
         [[builds.auxilliary_artifacts.build_log.download_sources]]
-        tarball_hash = "sha256:9129a682a6712fcfefd391a06bb7df4af1099dcc2dfbc5e0163a6eb69427dce8"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.11-GCC/Musl-build_log-v1.2.11-i686-linux-musl.tar.gz"
+        tarball_hash = "sha256:f592d22742b015f8249b16f3a6353508ce7d3b7bccce1135cc213c9db2672f96"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.25-GCC/Musl-build_log-v1.1.25-i686-linux-musl.tar.gz"
 
     [builds.auxilliary_artifacts.extract_log]
-    treehash = "sha1:dd7efa4c4f0a96c276bb39fc9ddb98d373d445ea"
+    treehash = "sha1:192f14c9c4042963202f9bc7161343e18fc5680a"
 
         [[builds.auxilliary_artifacts.extract_log.download_sources]]
-        tarball_hash = "sha256:99212652728a025f212b2b67e4cf3304d3892f4b341b86d50f47d595a4672fce"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.11-GCC/Musl-extract_log-v1.2.11-i686-linux-musl.tar.gz"
+        tarball_hash = "sha256:80e9649d7bc68dd0ef59281e73eb7d62d0d8a26740c67d544f81b7f775d02639"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.25-GCC/Musl-extract_log-v1.1.25-i686-linux-musl.tar.gz"
 
     [[builds.products]]
     deps = []
@@ -76,37 +86,42 @@ platform = "i686-linux-musl"
     path = "usr/lib/libc.so"
 
     [[builds.sources]]
-    treehash = "sha1:772272a3f819d22b9eac7888c8d5134af5449977"
-    url = "https://musl.libc.org/releases/musl-1.2.5.tar.gz"
+    treehash = "sha1:0d04173adea3b201b8ec3b955894c487de4c5853"
+    url = "https://musl.libc.org/releases/musl-1.1.24.tar.gz"
 
     [builds.artifact]
-    treehash = "sha1:e72c9c4c92dd9f77f5e07de4b1f5d9b2ff2d7fe7"
+    treehash = "sha1:2cf2bb4933515caea39375a5726a1cd02d3930da"
 
         [[builds.artifact.download_sources]]
-        tarball_hash = "sha256:a55c881d4455e586e70c589f8801d89befe7004ac4dc9e6b1fdcbaa5fe4563f1"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.11-GCC/Musl-v1.2.11-i686-linux-musl.tar.gz"
+        tarball_hash = "sha256:afbb10ad735f99a3f88bedba5bcaab75f954e3bd15be96f76eecfbef2a09c4d6"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.25-GCC/Musl-v1.1.25-i686-linux-musl.tar.gz"
 [[builds]]
-deps = []
 name = "Musl"
-lazy = "false"
-src_version = "1.2.5"
 platform = "aarch64-linux-musl"
+deps = []
+lazy = "false"
+src_version = "1.1.24"
+
+    [[builds.licenses]]
+    license_text = "musl as a whole is licensed under the following standard MIT license:\n\n----------------------------------------------------------------------\nCopyright © 2005-2019 Rich Felker, et al.\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n----------------------------------------------------------------------\n\nAuthors/contributors include:\n\nA. Wilcox\nAlex Dowad\nAlex Suykov\nAlexander Monakov\nAndre McCurdy\nAndrew Kelley\nAnthony G. Basile\nAric Belsito\nArvid Picciani\nBartosz Brachaczek\nBenjamin Peterson\nBobby Bingham\nBoris Brezillon\nBrent Cook\nChris Spiegel\nClément Vasseur\nDaniel Micay\nDaniel Sabogal\nDaurnimator\nDavid Carlier\nDavid Edelsohn\nDenys Vlasenko\nDmitry Ivanov\nDmitry V. Levin\nDrew DeVault\nEmil Renner Berthing\nFangrui Song\nFelix Fietkau\nFelix Janda\nGianluca Anzolin\nHauke Mehrtens\nHe X\nHiltjo Posthuma\nIsaac Dunham\nJaydeep Patil\nJens Gustedt\nJeremy Huntwork\nJo-Philipp Wich\nJoakim Sindholt\nJohn Spencer\nJosiah Worcester\nJulien Ramseier\nJustin Cormack\nKaarle Ritvanen\nKhem Raj\nKylie McClain\nLeah Neukirchen\nLuca Barbato\nLuka Perkov\nM Farkas-Dyck (Strake)\nMahesh Bodapati\nMarkus Wichmann\nMasanori Ogino\nMichael Clark\nMichael Forney\nMikhail Kremnyov\nNatanael Copa\nNicholas J. Kain\norc\nPascal Cuoq\nPatrick Oppenlander\nPetr Hosek\nPetr Skocik\nPierre Carrier\nReini Urban\nRich Felker\nRichard Pennington\nRyan Fairfax\nSamuel Holland\nSegev Finer\nShiz\nsin\nSolar Designer\nStefan Kristiansson\nStefan O'Rear\nSzabolcs Nagy\nTimo Teräs\nTrutz Behn\nValentin Ochs\nWill Dietz\nWilliam Haddon\nWilliam Pitcock\n\nPortions of this software are derived from third-party works licensed\nunder terms compatible with the above MIT license:\n\nThe TRE regular expression implementation (src/regex/reg* and\nsrc/regex/tre*) is Copyright © 2001-2008 Ville Laurikari and licensed\nunder a 2-clause BSD license (license text in the source files). The\nincluded version has been heavily modified by Rich Felker in 2012, in\nthe interests of size, simplicity, and namespace cleanliness.\n\nMuch of the math library code (src/math/* and src/complex/*) is\nCopyright © 1993,2004 Sun Microsystems or\nCopyright © 2003-2011 David Schultz or\nCopyright © 2003-2009 Steven G. Kargl or\nCopyright © 2003-2009 Bruce D. Evans or\nCopyright © 2008 Stephen L. Moshier or\nCopyright © 2017-2018 Arm Limited\nand labelled as such in comments in the individual source files. All\nhave been licensed under extremely permissive terms.\n\nThe ARM memcpy code (src/string/arm/memcpy_el.S) is Copyright © 2008\nThe Android Open Source Project and is licensed under a two-clause BSD\nlicense. It was taken from Bionic libc, used on Android.\n\nThe implementation of DES for crypt (src/crypt/crypt_des.c) is\nCopyright © 1994 David Burren. It is licensed under a BSD license.\n\nThe implementation of blowfish crypt (src/crypt/crypt_blowfish.c) was\noriginally written by Solar Designer and placed into the public\ndomain. The code also comes with a fallback permissive license for use\nin jurisdictions that may not recognize the public domain.\n\nThe smoothsort implementation (src/stdlib/qsort.c) is Copyright © 2011\nValentin Ochs and is licensed under an MIT-style license.\n\nThe x86_64 port was written by Nicholas J. Kain and is licensed under\nthe standard MIT terms.\n\nThe mips and microblaze ports were originally written by Richard\nPennington for use in the ellcc project. The original code was adapted\nby Rich Felker for build system and code conventions during upstream\nintegration. It is licensed under the standard MIT terms.\n\nThe mips64 port was contributed by Imagination Technologies and is\nlicensed under the standard MIT terms.\n\nThe powerpc port was also originally written by Richard Pennington,\nand later supplemented and integrated by John Spencer. It is licensed\nunder the standard MIT terms.\n\nAll other files which have no copyright comments are original works\nproduced specifically for use as part of this library, written either\nby Rich Felker, the main author of the library, or by one or more\ncontibutors listed above. Details on authorship of individual files\ncan be found in the git version control history of the project. The\nomission of copyright and license comments in each file is in the\ninterest of source tree size.\n\nIn addition, permission is hereby granted for all public header files\n(include/* and arch/*/bits/*) and crt files intended to be linked into\napplications (crt/*, ldso/dlstart.c, and arch/*/crt_arch.h) to omit\nthe copyright notice and permission notice otherwise required by the\nlicense, and to use these files without any requirement of\nattribution. These files include substantial contributions from:\n\nBobby Bingham\nJohn Spencer\nNicholas J. Kain\nRich Felker\nRichard Pennington\nStefan Kristiansson\nSzabolcs Nagy\n\nall of whom have explicitly granted such permission.\n\nThis file previously contained text expressing a belief that most of\nthe files covered by the above exception were sufficiently trivial not\nto be subject to copyright, resulting in confusion over whether it\nnegated the permissions granted in the license. In the spirit of\npermissive licensing, and of not having licensing issues being an\nobstacle to adoption, that text has been removed.\n"
+    filename = "COPYRIGHT"
+    license_type = "MIT"
 
     [builds.callback_defs]
 
     [builds.auxilliary_artifacts.build_log]
-    treehash = "sha1:f76a4df61763c626c6c56ff53879b8726c57b136"
+    treehash = "sha1:23f91524a71a05ac32410a254b19b40f2d6a4a44"
 
         [[builds.auxilliary_artifacts.build_log.download_sources]]
-        tarball_hash = "sha256:6f8ccb98ae8b6a540cd4741406c4ad9d5fcce46160554e0c986b541ada6d525e"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.11-GCC/Musl-build_log-v1.2.11-aarch64-linux-musl.tar.gz"
+        tarball_hash = "sha256:58f74a40911fa7f755a222c94ceb6499d25af3fe1bf18ddf01335d623f790411"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.25-GCC/Musl-build_log-v1.1.25-aarch64-linux-musl.tar.gz"
 
     [builds.auxilliary_artifacts.extract_log]
-    treehash = "sha1:4bd5e3bfc9de7a623844929fe035d7f44e713b8d"
+    treehash = "sha1:91071d07860ce4c21e5b24fd999594aab9fe5c8d"
 
         [[builds.auxilliary_artifacts.extract_log.download_sources]]
-        tarball_hash = "sha256:c9ad45be0ebe07cff222ebf3ac81e23712019f96204196506c7ee8290f6e4113"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.11-GCC/Musl-extract_log-v1.2.11-aarch64-linux-musl.tar.gz"
+        tarball_hash = "sha256:039e1845743f2a2983564866ad9c5790e0559e74a4523976a52944a08559acc3"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.25-GCC/Musl-extract_log-v1.1.25-aarch64-linux-musl.tar.gz"
 
     [[builds.products]]
     deps = []
@@ -117,78 +132,42 @@ platform = "aarch64-linux-musl"
     path = "usr/lib/libc.so"
 
     [[builds.sources]]
-    treehash = "sha1:772272a3f819d22b9eac7888c8d5134af5449977"
-    url = "https://musl.libc.org/releases/musl-1.2.5.tar.gz"
+    treehash = "sha1:0d04173adea3b201b8ec3b955894c487de4c5853"
+    url = "https://musl.libc.org/releases/musl-1.1.24.tar.gz"
 
     [builds.artifact]
-    treehash = "sha1:02b299d6bb76e6f19189cfd2388e2bb5bf7cd98d"
+    treehash = "sha1:8f145598de39bade4365fc38e4f2ee1190d7c2b5"
 
         [[builds.artifact.download_sources]]
-        tarball_hash = "sha256:b61223bb3bd7cdbeeb745fd2b16400a08177b8a61fb7926d45f11ea7947d536f"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.11-GCC/Musl-v1.2.11-aarch64-linux-musl.tar.gz"
+        tarball_hash = "sha256:adf76b5af73c813775c7f738f1a417a1443a9a2a58e8700cf338d3e028e92142"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.25-GCC/Musl-v1.1.25-aarch64-linux-musl.tar.gz"
 [[builds]]
-deps = []
 name = "Musl"
-lazy = "false"
-src_version = "1.2.5"
 platform = "armv6l-linux-musleabihf"
-
-    [builds.callback_defs]
-
-    [builds.auxilliary_artifacts.build_log]
-    treehash = "sha1:54863a97b866a4666ba6e677b94749d80b6d97e0"
-
-        [[builds.auxilliary_artifacts.build_log.download_sources]]
-        tarball_hash = "sha256:a9281a4156c5cc3afaad44f1713c2089047ade2051797232c7559a1537987dfd"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.11-GCC/Musl-build_log-v1.2.11-armv6l-linux-musleabihf.tar.gz"
-
-    [builds.auxilliary_artifacts.extract_log]
-    treehash = "sha1:738d1fac8af0b94c691fd8de937d81a53b5e776f"
-
-        [[builds.auxilliary_artifacts.extract_log.download_sources]]
-        tarball_hash = "sha256:51cd0b8f7093cfe29e4b9d1adf66e746d802ba92637975d9c18f1a4e2465cca0"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.11-GCC/Musl-extract_log-v1.2.11-armv6l-linux-musleabihf.tar.gz"
-
-    [[builds.products]]
-    deps = []
-    name = "libc"
-    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
-    soname = "libc.musl-armhf.so.1"
-    type = "library"
-    path = "usr/lib/libc.so"
-
-    [[builds.sources]]
-    treehash = "sha1:772272a3f819d22b9eac7888c8d5134af5449977"
-    url = "https://musl.libc.org/releases/musl-1.2.5.tar.gz"
-
-    [builds.artifact]
-    treehash = "sha1:e1c771210cccd9635bdb82e8a69486f14b809524"
-
-        [[builds.artifact.download_sources]]
-        tarball_hash = "sha256:3bf0c1fb9cd3e3931deace7a927b133cc47be9dc0f08f08fc3c97100ce14eebc"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.11-GCC/Musl-v1.2.11-armv6l-linux-musleabihf.tar.gz"
-[[builds]]
 deps = []
-name = "Musl"
 lazy = "false"
-src_version = "1.2.5"
-platform = "armv7l-linux-musleabihf"
+src_version = "1.1.24"
+
+    [[builds.licenses]]
+    license_text = "musl as a whole is licensed under the following standard MIT license:\n\n----------------------------------------------------------------------\nCopyright © 2005-2019 Rich Felker, et al.\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n----------------------------------------------------------------------\n\nAuthors/contributors include:\n\nA. Wilcox\nAlex Dowad\nAlex Suykov\nAlexander Monakov\nAndre McCurdy\nAndrew Kelley\nAnthony G. Basile\nAric Belsito\nArvid Picciani\nBartosz Brachaczek\nBenjamin Peterson\nBobby Bingham\nBoris Brezillon\nBrent Cook\nChris Spiegel\nClément Vasseur\nDaniel Micay\nDaniel Sabogal\nDaurnimator\nDavid Carlier\nDavid Edelsohn\nDenys Vlasenko\nDmitry Ivanov\nDmitry V. Levin\nDrew DeVault\nEmil Renner Berthing\nFangrui Song\nFelix Fietkau\nFelix Janda\nGianluca Anzolin\nHauke Mehrtens\nHe X\nHiltjo Posthuma\nIsaac Dunham\nJaydeep Patil\nJens Gustedt\nJeremy Huntwork\nJo-Philipp Wich\nJoakim Sindholt\nJohn Spencer\nJosiah Worcester\nJulien Ramseier\nJustin Cormack\nKaarle Ritvanen\nKhem Raj\nKylie McClain\nLeah Neukirchen\nLuca Barbato\nLuka Perkov\nM Farkas-Dyck (Strake)\nMahesh Bodapati\nMarkus Wichmann\nMasanori Ogino\nMichael Clark\nMichael Forney\nMikhail Kremnyov\nNatanael Copa\nNicholas J. Kain\norc\nPascal Cuoq\nPatrick Oppenlander\nPetr Hosek\nPetr Skocik\nPierre Carrier\nReini Urban\nRich Felker\nRichard Pennington\nRyan Fairfax\nSamuel Holland\nSegev Finer\nShiz\nsin\nSolar Designer\nStefan Kristiansson\nStefan O'Rear\nSzabolcs Nagy\nTimo Teräs\nTrutz Behn\nValentin Ochs\nWill Dietz\nWilliam Haddon\nWilliam Pitcock\n\nPortions of this software are derived from third-party works licensed\nunder terms compatible with the above MIT license:\n\nThe TRE regular expression implementation (src/regex/reg* and\nsrc/regex/tre*) is Copyright © 2001-2008 Ville Laurikari and licensed\nunder a 2-clause BSD license (license text in the source files). The\nincluded version has been heavily modified by Rich Felker in 2012, in\nthe interests of size, simplicity, and namespace cleanliness.\n\nMuch of the math library code (src/math/* and src/complex/*) is\nCopyright © 1993,2004 Sun Microsystems or\nCopyright © 2003-2011 David Schultz or\nCopyright © 2003-2009 Steven G. Kargl or\nCopyright © 2003-2009 Bruce D. Evans or\nCopyright © 2008 Stephen L. Moshier or\nCopyright © 2017-2018 Arm Limited\nand labelled as such in comments in the individual source files. All\nhave been licensed under extremely permissive terms.\n\nThe ARM memcpy code (src/string/arm/memcpy_el.S) is Copyright © 2008\nThe Android Open Source Project and is licensed under a two-clause BSD\nlicense. It was taken from Bionic libc, used on Android.\n\nThe implementation of DES for crypt (src/crypt/crypt_des.c) is\nCopyright © 1994 David Burren. It is licensed under a BSD license.\n\nThe implementation of blowfish crypt (src/crypt/crypt_blowfish.c) was\noriginally written by Solar Designer and placed into the public\ndomain. The code also comes with a fallback permissive license for use\nin jurisdictions that may not recognize the public domain.\n\nThe smoothsort implementation (src/stdlib/qsort.c) is Copyright © 2011\nValentin Ochs and is licensed under an MIT-style license.\n\nThe x86_64 port was written by Nicholas J. Kain and is licensed under\nthe standard MIT terms.\n\nThe mips and microblaze ports were originally written by Richard\nPennington for use in the ellcc project. The original code was adapted\nby Rich Felker for build system and code conventions during upstream\nintegration. It is licensed under the standard MIT terms.\n\nThe mips64 port was contributed by Imagination Technologies and is\nlicensed under the standard MIT terms.\n\nThe powerpc port was also originally written by Richard Pennington,\nand later supplemented and integrated by John Spencer. It is licensed\nunder the standard MIT terms.\n\nAll other files which have no copyright comments are original works\nproduced specifically for use as part of this library, written either\nby Rich Felker, the main author of the library, or by one or more\ncontibutors listed above. Details on authorship of individual files\ncan be found in the git version control history of the project. The\nomission of copyright and license comments in each file is in the\ninterest of source tree size.\n\nIn addition, permission is hereby granted for all public header files\n(include/* and arch/*/bits/*) and crt files intended to be linked into\napplications (crt/*, ldso/dlstart.c, and arch/*/crt_arch.h) to omit\nthe copyright notice and permission notice otherwise required by the\nlicense, and to use these files without any requirement of\nattribution. These files include substantial contributions from:\n\nBobby Bingham\nJohn Spencer\nNicholas J. Kain\nRich Felker\nRichard Pennington\nStefan Kristiansson\nSzabolcs Nagy\n\nall of whom have explicitly granted such permission.\n\nThis file previously contained text expressing a belief that most of\nthe files covered by the above exception were sufficiently trivial not\nto be subject to copyright, resulting in confusion over whether it\nnegated the permissions granted in the license. In the spirit of\npermissive licensing, and of not having licensing issues being an\nobstacle to adoption, that text has been removed.\n"
+    filename = "COPYRIGHT"
+    license_type = "MIT"
 
     [builds.callback_defs]
 
     [builds.auxilliary_artifacts.build_log]
-    treehash = "sha1:9dd5e3e5cb254a22acb2b77deedf44a0370e92f9"
+    treehash = "sha1:2e296f30440eaa461f10809d316ae9449691a54e"
 
         [[builds.auxilliary_artifacts.build_log.download_sources]]
-        tarball_hash = "sha256:688a14362f1ed890795ac4e3cdca84c2b1b7e1b0c921afdce14f36ac9fefc597"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.11-GCC/Musl-build_log-v1.2.11-armv7l-linux-musleabihf.tar.gz"
+        tarball_hash = "sha256:02eb2d640b97df82ff93450a9b41d907e9c7e5169dc25c78cdbd9cc0351020b8"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.25-GCC/Musl-build_log-v1.1.25-armv6l-linux-musleabihf.tar.gz"
 
     [builds.auxilliary_artifacts.extract_log]
-    treehash = "sha1:0573dfc9b4b83f89025075c0300064f8a6f855a7"
+    treehash = "sha1:d652b70c63e6b3e2cce08199d409142208cbb02f"
 
         [[builds.auxilliary_artifacts.extract_log.download_sources]]
-        tarball_hash = "sha256:e58886d5c9f1e7a348a20a3004f97a2b47a1db37b2c3f325892ada3368f0e4bd"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.11-GCC/Musl-extract_log-v1.2.11-armv7l-linux-musleabihf.tar.gz"
+        tarball_hash = "sha256:fb631c237f5736e5d07ab4c1250e8021a8db525029a47afe24fd2fedd070182e"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.25-GCC/Musl-extract_log-v1.1.25-armv6l-linux-musleabihf.tar.gz"
 
     [[builds.products]]
     deps = []
@@ -199,12 +178,58 @@ platform = "armv7l-linux-musleabihf"
     path = "usr/lib/libc.so"
 
     [[builds.sources]]
-    treehash = "sha1:772272a3f819d22b9eac7888c8d5134af5449977"
-    url = "https://musl.libc.org/releases/musl-1.2.5.tar.gz"
+    treehash = "sha1:0d04173adea3b201b8ec3b955894c487de4c5853"
+    url = "https://musl.libc.org/releases/musl-1.1.24.tar.gz"
 
     [builds.artifact]
-    treehash = "sha1:579bea4e1abf8f0f610e1e6e6d6263582e9a36df"
+    treehash = "sha1:f52fa239379254f8a2fdd206fd7d7befafac04bc"
 
         [[builds.artifact.download_sources]]
-        tarball_hash = "sha256:43da558d82598ad929dd6fd0550951cba0b59df262e95d2138903326808aa72f"
-        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.2.11-GCC/Musl-v1.2.11-armv7l-linux-musleabihf.tar.gz"
+        tarball_hash = "sha256:d9432b8f4022f1726dfe54f8cc34578207b6cc362476e71eb8c78e6061f0d2f5"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.25-GCC/Musl-v1.1.25-armv6l-linux-musleabihf.tar.gz"
+[[builds]]
+name = "Musl"
+platform = "armv7l-linux-musleabihf"
+deps = []
+lazy = "false"
+src_version = "1.1.24"
+
+    [[builds.licenses]]
+    license_text = "musl as a whole is licensed under the following standard MIT license:\n\n----------------------------------------------------------------------\nCopyright © 2005-2019 Rich Felker, et al.\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\"Software\"), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n----------------------------------------------------------------------\n\nAuthors/contributors include:\n\nA. Wilcox\nAlex Dowad\nAlex Suykov\nAlexander Monakov\nAndre McCurdy\nAndrew Kelley\nAnthony G. Basile\nAric Belsito\nArvid Picciani\nBartosz Brachaczek\nBenjamin Peterson\nBobby Bingham\nBoris Brezillon\nBrent Cook\nChris Spiegel\nClément Vasseur\nDaniel Micay\nDaniel Sabogal\nDaurnimator\nDavid Carlier\nDavid Edelsohn\nDenys Vlasenko\nDmitry Ivanov\nDmitry V. Levin\nDrew DeVault\nEmil Renner Berthing\nFangrui Song\nFelix Fietkau\nFelix Janda\nGianluca Anzolin\nHauke Mehrtens\nHe X\nHiltjo Posthuma\nIsaac Dunham\nJaydeep Patil\nJens Gustedt\nJeremy Huntwork\nJo-Philipp Wich\nJoakim Sindholt\nJohn Spencer\nJosiah Worcester\nJulien Ramseier\nJustin Cormack\nKaarle Ritvanen\nKhem Raj\nKylie McClain\nLeah Neukirchen\nLuca Barbato\nLuka Perkov\nM Farkas-Dyck (Strake)\nMahesh Bodapati\nMarkus Wichmann\nMasanori Ogino\nMichael Clark\nMichael Forney\nMikhail Kremnyov\nNatanael Copa\nNicholas J. Kain\norc\nPascal Cuoq\nPatrick Oppenlander\nPetr Hosek\nPetr Skocik\nPierre Carrier\nReini Urban\nRich Felker\nRichard Pennington\nRyan Fairfax\nSamuel Holland\nSegev Finer\nShiz\nsin\nSolar Designer\nStefan Kristiansson\nStefan O'Rear\nSzabolcs Nagy\nTimo Teräs\nTrutz Behn\nValentin Ochs\nWill Dietz\nWilliam Haddon\nWilliam Pitcock\n\nPortions of this software are derived from third-party works licensed\nunder terms compatible with the above MIT license:\n\nThe TRE regular expression implementation (src/regex/reg* and\nsrc/regex/tre*) is Copyright © 2001-2008 Ville Laurikari and licensed\nunder a 2-clause BSD license (license text in the source files). The\nincluded version has been heavily modified by Rich Felker in 2012, in\nthe interests of size, simplicity, and namespace cleanliness.\n\nMuch of the math library code (src/math/* and src/complex/*) is\nCopyright © 1993,2004 Sun Microsystems or\nCopyright © 2003-2011 David Schultz or\nCopyright © 2003-2009 Steven G. Kargl or\nCopyright © 2003-2009 Bruce D. Evans or\nCopyright © 2008 Stephen L. Moshier or\nCopyright © 2017-2018 Arm Limited\nand labelled as such in comments in the individual source files. All\nhave been licensed under extremely permissive terms.\n\nThe ARM memcpy code (src/string/arm/memcpy_el.S) is Copyright © 2008\nThe Android Open Source Project and is licensed under a two-clause BSD\nlicense. It was taken from Bionic libc, used on Android.\n\nThe implementation of DES for crypt (src/crypt/crypt_des.c) is\nCopyright © 1994 David Burren. It is licensed under a BSD license.\n\nThe implementation of blowfish crypt (src/crypt/crypt_blowfish.c) was\noriginally written by Solar Designer and placed into the public\ndomain. The code also comes with a fallback permissive license for use\nin jurisdictions that may not recognize the public domain.\n\nThe smoothsort implementation (src/stdlib/qsort.c) is Copyright © 2011\nValentin Ochs and is licensed under an MIT-style license.\n\nThe x86_64 port was written by Nicholas J. Kain and is licensed under\nthe standard MIT terms.\n\nThe mips and microblaze ports were originally written by Richard\nPennington for use in the ellcc project. The original code was adapted\nby Rich Felker for build system and code conventions during upstream\nintegration. It is licensed under the standard MIT terms.\n\nThe mips64 port was contributed by Imagination Technologies and is\nlicensed under the standard MIT terms.\n\nThe powerpc port was also originally written by Richard Pennington,\nand later supplemented and integrated by John Spencer. It is licensed\nunder the standard MIT terms.\n\nAll other files which have no copyright comments are original works\nproduced specifically for use as part of this library, written either\nby Rich Felker, the main author of the library, or by one or more\ncontibutors listed above. Details on authorship of individual files\ncan be found in the git version control history of the project. The\nomission of copyright and license comments in each file is in the\ninterest of source tree size.\n\nIn addition, permission is hereby granted for all public header files\n(include/* and arch/*/bits/*) and crt files intended to be linked into\napplications (crt/*, ldso/dlstart.c, and arch/*/crt_arch.h) to omit\nthe copyright notice and permission notice otherwise required by the\nlicense, and to use these files without any requirement of\nattribution. These files include substantial contributions from:\n\nBobby Bingham\nJohn Spencer\nNicholas J. Kain\nRich Felker\nRichard Pennington\nStefan Kristiansson\nSzabolcs Nagy\n\nall of whom have explicitly granted such permission.\n\nThis file previously contained text expressing a belief that most of\nthe files covered by the above exception were sufficiently trivial not\nto be subject to copyright, resulting in confusion over whether it\nnegated the permissions granted in the license. In the spirit of\npermissive licensing, and of not having licensing issues being an\nobstacle to adoption, that text has been removed.\n"
+    filename = "COPYRIGHT"
+    license_type = "MIT"
+
+    [builds.callback_defs]
+
+    [builds.auxilliary_artifacts.build_log]
+    treehash = "sha1:ddbaddf6af261d4698c8b6ee6d4a3d6f30380351"
+
+        [[builds.auxilliary_artifacts.build_log.download_sources]]
+        tarball_hash = "sha256:fa53ded8efc4bf7c7b9428378998aafe7559afcb9883d75eba761a5b00d62df1"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.25-GCC/Musl-build_log-v1.1.25-armv7l-linux-musleabihf.tar.gz"
+
+    [builds.auxilliary_artifacts.extract_log]
+    treehash = "sha1:ee7cd75c8d0862e8d14167ec2cae792e09659be3"
+
+        [[builds.auxilliary_artifacts.extract_log.download_sources]]
+        tarball_hash = "sha256:0b7cecd77d43b2209d44df90ef20d0aedf7d4cb4a3fa0266c08e5e4f5428c4bc"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.25-GCC/Musl-extract_log-v1.1.25-armv7l-linux-musleabihf.tar.gz"
+
+    [[builds.products]]
+    deps = []
+    name = "libc"
+    flags = ["RTLD_DEEPBIND", "RTLD_LAZY"]
+    soname = "libc.musl-armhf.so.1"
+    type = "library"
+    path = "usr/lib/libc.so"
+
+    [[builds.sources]]
+    treehash = "sha1:0d04173adea3b201b8ec3b955894c487de4c5853"
+    url = "https://musl.libc.org/releases/musl-1.1.24.tar.gz"
+
+    [builds.artifact]
+    treehash = "sha1:caf3604462d58532b56a338d6c48ab8496bf51fe"
+
+        [[builds.artifact.download_sources]]
+        tarball_hash = "sha256:b4e8b2412a3d2a9f001b8ffec04259613d5bf265ede6cf18e992e8289145a5d4"
+        url = "https://github.com/staticfloat/Musl_jll.jl/releases/download/v1.1.25-GCC/Musl-v1.1.25-armv7l-linux-musleabihf.tar.gz"
